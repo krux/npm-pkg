@@ -1,0 +1,49 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+D:= $(CURDIR)/debian/npm
+
+build:
+	dh_testdir
+	dh_quilt_patch
+
+clean:
+	dh_testdir
+	dh_testroot
+	dh_quilt_unpatch
+	dh_clean
+
+#	rm -rf man
+#	rm -rf html/doc/*.html
+#	rm -rf html/api/*.html
+
+install: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs
+
+#	make doc
+
+	mkdir -p $D/usr/lib/nodejs/npm
+	cp -a AUTHORS bin cli.js configure doc \
+	lib man LICENSE Makefile node_modules package.json \
+	README.md scripts test $D/usr/lib/nodejs/npm
+
+binary-indep: build install
+	dh_testdir
+	dh_testroot
+	dh_installchangelogs
+	dh_installdocs
+	dh_compress
+	dh_fixperms
+	dh_installdeb
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary-arch:
+
+binary: binary-indep
+
+.PHONY: build clean binary-indep binary-arch binary install

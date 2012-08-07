@@ -1,0 +1,19 @@
+Source: npm
+Section: web
+Priority: extra
+Maintainer: Chris Lea <chl@chrislea.com>
+Build-Depends: debhelper (>= 7), autotools-dev, nodejs (>= 0.4), quilt (>= 0.46-7~)
+Standards-Version: 3.8.3
+Homepage: http://github.com/isaacs/npm
+
+Package: npm
+Architecture: all
+Depends: ${misc:Depends}, nodejs-dev (>= 0.4)
+Description: package manager for nodejs
+ npm is the package manager for the Node JavaScript platform.  It puts
+ modules in place so that node can find them, and manages dependency
+ conflicts intelligently.
+ .
+ It is extremely configurable to support a wide variety of use cases.
+ Most commonly, it is used to publish, discover, install, and develop
+ node programs.

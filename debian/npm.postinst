@@ -1,0 +1,19 @@
+#!/bin/sh
+
+set -e
+
+case "$1" in
+  configure)
+        update-alternatives --quiet --install /usr/bin/npm npm \
+            /usr/lib/nodejs/npm/cli.js 50 \
+            --slave /usr/bin/npm_g npm_g \
+            /usr/lib/nodejs/npm/cli.js \
+            --slave /usr/bin/npm-g npm-g \
+            /usr/lib/nodejs/npm/cli.js
+
+        ;;
+  *)
+esac
+
+exit 0
+

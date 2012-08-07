@@ -1,0 +1,75 @@
+diff -urN npm-1.1.32.orig/bin/npm-cli.js npm-1.1.32/bin/npm-cli.js
+--- npm-1.1.32.orig/bin/npm-cli.js	2012-06-19 00:03:01.000000000 +0000
++++ npm-1.1.32/bin/npm-cli.js	2012-06-27 22:22:15.000000000 +0000
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env node
++#!/usr/bin/env nodejs
+ ;(function () { // wrapper in case we're in module_context mode
+ 
+ // windows: running "npm blah" in this folder will invoke WSH, not node.
+diff -urN npm-1.1.32.orig/cli.js npm-1.1.32/cli.js
+--- npm-1.1.32.orig/cli.js	2012-06-19 00:03:01.000000000 +0000
++++ npm-1.1.32/cli.js	2012-06-27 22:22:15.000000000 +0000
+@@ -1,2 +1,2 @@
+-#!/usr/bin/env node
++#!/usr/bin/env nodejs
+ require("./bin/npm-cli.js")
+diff -urN npm-1.1.32.orig/node_modules/node-gyp/bin/node-gyp.js npm-1.1.32/node_modules/node-gyp/bin/node-gyp.js
+--- npm-1.1.32.orig/node_modules/node-gyp/bin/node-gyp.js	2012-06-19 00:03:01.000000000 +0000
++++ npm-1.1.32/node_modules/node-gyp/bin/node-gyp.js	2012-06-27 22:22:15.000000000 +0000
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env node
++#!/usr/bin/env nodejs
+ 
+ /**
+  * Set the title.
+diff -urN npm-1.1.32.orig/node_modules/nopt/bin/nopt.js npm-1.1.32/node_modules/nopt/bin/nopt.js
+--- npm-1.1.32.orig/node_modules/nopt/bin/nopt.js	2012-06-19 00:03:01.000000000 +0000
++++ npm-1.1.32/node_modules/nopt/bin/nopt.js	2012-06-27 22:22:15.000000000 +0000
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env node
++#!/usr/bin/env nodejs
+ var nopt = require("../lib/nopt")
+   , types = { num: Number
+             , bool: Boolean
+diff -urN npm-1.1.32.orig/node_modules/semver/bin/semver npm-1.1.32/node_modules/semver/bin/semver
+--- npm-1.1.32.orig/node_modules/semver/bin/semver	2012-06-19 00:03:02.000000000 +0000
++++ npm-1.1.32/node_modules/semver/bin/semver	2012-06-27 22:22:15.000000000 +0000
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env node
++#!/usr/bin/env nodejs
+ // Standalone semver comparison program.
+ // Exits successfully and prints matching version(s) if
+ // any supplied version is valid and passes all tests.
+diff -urN npm-1.1.32.orig/node_modules/which/bin/which npm-1.1.32/node_modules/which/bin/which
+--- npm-1.1.32.orig/node_modules/which/bin/which	2012-06-19 00:03:02.000000000 +0000
++++ npm-1.1.32/node_modules/which/bin/which	2012-06-27 22:22:15.000000000 +0000
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env node
++#!/usr/bin/env nodejs
+ var which = require("../")
+ if (process.argv.length < 3) {
+   console.error("Usage: which <thing>")
+diff -urN npm-1.1.32.orig/scripts/index-build.js npm-1.1.32/scripts/index-build.js
+--- npm-1.1.32.orig/scripts/index-build.js	2012-06-19 00:03:02.000000000 +0000
++++ npm-1.1.32/scripts/index-build.js	2012-06-27 22:22:15.000000000 +0000
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env node
++#!/usr/bin/env nodejs
+ var fs = require("fs")
+   , path = require("path")
+   , cli = path.resolve(__dirname, "..", "doc", "cli")
+diff -urN npm-1.1.32.orig/test/packages/npm-test-array-bin/bin/array-bin npm-1.1.32/test/packages/npm-test-array-bin/bin/array-bin
+--- npm-1.1.32.orig/test/packages/npm-test-array-bin/bin/array-bin	2012-06-19 00:03:02.000000000 +0000
++++ npm-1.1.32/test/packages/npm-test-array-bin/bin/array-bin	2012-06-27 22:22:16.000000000 +0000
+@@ -1,2 +1,2 @@
+-#!/usr/bin/env node
++#!/usr/bin/env nodejs
+ console.log('ok')
+diff -urN npm-1.1.32.orig/test/packages/npm-test-dir-bin/bin/dir-bin npm-1.1.32/test/packages/npm-test-dir-bin/bin/dir-bin
+--- npm-1.1.32.orig/test/packages/npm-test-dir-bin/bin/dir-bin	2012-06-19 00:03:02.000000000 +0000
++++ npm-1.1.32/test/packages/npm-test-dir-bin/bin/dir-bin	2012-06-27 22:22:16.000000000 +0000
+@@ -1,2 +1,2 @@
+-#!/usr/bin/env node
++#!/usr/bin/env nodejs
+ console.log('ok')
