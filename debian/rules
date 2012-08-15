@@ -11,7 +11,7 @@ clean:
 	dh_testdir
 	dh_testroot
 	dh_quilt_unpatch
-	dh_clean
+	dh_clean --exclude=orig --exclude=rej
 
 #	rm -rf man
 #	rm -rf html/doc/*.html
