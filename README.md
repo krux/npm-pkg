@@ -1,3 +1,9 @@
+*** DEPRECATED AND ARCHIVED ***
+===============
+
+As of 2018-02-21, this repo is not in use nor being managed.
+
+
 npm(1) -- node package manager
 ==============================
 
